@@ -5,7 +5,10 @@ This code demonstrates a possible Fizz Buzz Kata implementation without using if
 The code was implemented via TDD to initially produce the obvious solution using if 
 statements and afterwards refactored step-by-step to remove all conditionals and replace them with setting up dictionaries for producing the result.
 
-This solution is only demonstrating alternative implementation approaches and is by way not trying to provide the most efficient nor most readable or maintainable code :-)
+This solution of the Kata was only created to prove that it's possible to not use any conditional statements or loops to achieve the expected behaviour.
+
+Any considerations of clean code such as readability have been disregarded altogether.
+And that's why you're here! 😎
 
 ***Note***: the amount of data-driven test cases should usually of course not be necessary and are rather provided to demonstrate to the reader that the solution works ;-) 
 
