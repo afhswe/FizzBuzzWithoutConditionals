@@ -10,9 +10,9 @@ This solution of the Kata was only created to prove that it's possible to not us
 Any considerations of clean code such as readability have been disregarded altogether.
 And that's why you're here! 😎
 
-PS: the goal of the original Kata is to also produce a list of all numbers from 1 to 100. This part was intentionally skipped and is left to the readers imagination.
-
 ***Note***: the amount of data-driven test cases should usually of course not be necessary and are rather provided to demonstrate to the reader that the solution works ;-) 
+
+PS: the goal of the original Kata is to also produce a list of all numbers from 1 to 100. This part was intentionally skipped and is left to the readers imagination.
 
 # Excercise 1 - Make the code even simpler
 
