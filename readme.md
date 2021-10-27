@@ -1,6 +1,6 @@
 # Fizz Buzz Kata Implementation Without Conditionals
 
-This code demonstrates a possible Fizz Buzz Kata implementation without using if conditionals and instead working with dictionaries.
+This code demonstrates a possible [Fizz Buzz Kata](https://codingdojo.org/kata/FizzBuzz/) implementation without using if conditionals and instead working with dictionaries.
 
 The code was implemented via TDD to initially produce the obvious solution using if 
 statements and afterwards refactored step-by-step to remove all conditionals and replace them with setting up dictionaries for producing the result.
