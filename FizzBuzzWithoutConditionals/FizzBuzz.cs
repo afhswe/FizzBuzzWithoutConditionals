@@ -25,7 +25,7 @@ namespace FizzBuzzWithoutConditionals
         private string GetDivisibleResult(int number, int divisibleBy, string word)
         {
             var dummyResultString = "";
-            var foundFive = _resultMap.TryGetValue(number % divisibleBy, out dummyResultString);
+            var foundWord = _resultMap.TryGetValue(number % divisibleBy, out dummyResultString);
 
             var matchMap = new Dictionary<bool, string>()
             {
@@ -33,7 +33,7 @@ namespace FizzBuzzWithoutConditionals
                 {false, ""}
             };
 
-            return matchMap[!foundFive];
+            return matchMap[!foundWord];
         }
 
         private void initResultMap(int number)
@@ -42,6 +42,8 @@ namespace FizzBuzzWithoutConditionals
             {
                 {1, number.ToString()},
                 {2, number.ToString()},
+                {3, number.ToString()},
+                {4, number.ToString()}
             };
             _resultMap.TryAdd(number, number.ToString());
         }
