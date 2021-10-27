@@ -29,3 +29,5 @@ I don't know, let's find out 😉
 
 ***Note:*** feel free to refactor from this code or start the solution from scratch.
 The tests will surve as a safety net to tell you when you went wrong.
+
+PS: the goal of the original Kata is to also produce a list of all numbers from 1 to 100. This part was intentionally skipped and is left to the readers imagination.
