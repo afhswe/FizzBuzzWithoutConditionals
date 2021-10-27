@@ -47,7 +47,7 @@ namespace FizzBuzzWithoutConditionals
         public void FifteenShowsFizzBuzz()
         {
             string result = FizzBuzz(15);
-            result.Should().Be("CallNumber");
+            result.Should().Be("FizzBuzz");
         }
 
         private string FizzBuzz(int number)
