@@ -1,4 +1,4 @@
-# Fizz Buzz Implementation Without Conditionals
+# Fizz Buzz Kata Implementation Without Conditionals
 
 This code demonstrates a possible Fizz Buzz Kata implementation without using if conditionals and instead working with dictionaries.
 
