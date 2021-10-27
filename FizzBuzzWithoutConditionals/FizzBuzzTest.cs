@@ -8,13 +8,6 @@ namespace FizzBuzzWithoutConditionals
 {
     public class FizzBuzzTest
     {
-        // TODO-List
-        // 1 => "1" => DONE
-        // 2 => "2"
-        // 3 => "Fizz"
-        // 5 => "Buzz"
-        // 15 => "CallNumber"
-
         [Fact]
         public void OneShowsOne()
         {
