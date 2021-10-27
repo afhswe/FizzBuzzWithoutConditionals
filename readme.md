@@ -10,6 +10,8 @@ This solution of the Kata was only created to prove that it's possible to not us
 Any considerations of clean code such as readability have been disregarded altogether.
 And that's why you're here! 😎
 
+PS: the goal of the original Kata is to also produce a list of all numbers from 1 to 100. This part was intentionally skipped and is left to the readers imagination.
+
 ***Note***: the amount of data-driven test cases should usually of course not be necessary and are rather provided to demonstrate to the reader that the solution works ;-) 
 
 # Excercise 1 - Make the code even simpler
@@ -28,6 +30,4 @@ Is it even possible to achieve this without conditionals?
 I don't know, let's find out 😉
 
 ***Note:*** feel free to refactor from this code or start the solution from scratch.
-The tests will surve as a safety net to tell you when you went wrong.
-
-PS: the goal of the original Kata is to also produce a list of all numbers from 1 to 100. This part was intentionally skipped and is left to the readers imagination.
+The tests will serve as a safety net to tell you when you went wrong.
