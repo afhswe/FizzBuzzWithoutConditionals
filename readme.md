@@ -11,7 +11,7 @@ This solution is only demonstrating alternative implementation approaches and is
 
 # Excercise 1 - Make the code even simpler
 
-Considering that the requirements are set in stone will not, think of how this code could be simplified while still not using any conditionals or loops.
+Assuming that the requirements are set in stone and will not change, think of how this code could be simplified while still not using any conditionals or loops.
 
 # Excercise 2 - Make the code extensible
 
