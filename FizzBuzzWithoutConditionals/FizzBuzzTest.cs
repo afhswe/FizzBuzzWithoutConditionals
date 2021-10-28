@@ -62,7 +62,8 @@ namespace FizzBuzzWithoutConditionals
         [InlineData(15, "FizzBuzz")]
         [InlineData(16, "16")]
         [InlineData(17, "17")]
-        [InlineData(27, "27")]
+        [InlineData(27, "Fizz")]
+        [InlineData(28, "28")]
         [InlineData(30, "FizzBuzz")]
         [InlineData(31, "31")]
 
