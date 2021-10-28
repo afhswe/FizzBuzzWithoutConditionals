@@ -11,7 +11,24 @@ namespace FizzBuzzWithoutConditionals
             initResultMap(number);
             string currentResult = GetDivisibleResult(number, 3, "Fizz");
             currentResult += GetDivisibleResult(number, 5, "Buzz");
-            return GetFizzBuzzResult(number, currentResult);
+            currentResult = GetFizzBuzzResult(number, currentResult);
+            var finalResult = CheckSpecialCaseZero(number, currentResult);
+            return finalResult;
+        }
+
+        private static string CheckSpecialCaseZero(int number, string currentResult)
+        {
+            var finalResultMap = new Dictionary<string, string>()
+            {
+                {"Fizz", "Fizz"},
+                {"Buzz", "Buzz"},
+                {"FizzBuzz", "FizzBuzz"},
+                {"0", "FizzBuzz"}
+            };
+            finalResultMap.TryAdd(number.ToString(), number.ToString());
+
+            var finalResult = finalResultMap[currentResult];
+            return finalResult;
         }
 
         private static string GetFizzBuzzResult(int number, string currentResult)

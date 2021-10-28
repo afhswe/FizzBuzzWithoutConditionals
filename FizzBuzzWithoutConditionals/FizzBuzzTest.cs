@@ -44,7 +44,7 @@ namespace FizzBuzzWithoutConditionals
         }
 
         [Theory]
-        [InlineData(0, "0")]
+        [InlineData(0, "FizzBuzz")]
         [InlineData(1, "1")]
         [InlineData(2, "2")]
         [InlineData(3, "Fizz")]
