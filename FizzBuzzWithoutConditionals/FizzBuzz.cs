@@ -12,8 +12,7 @@ namespace FizzBuzzWithoutConditionals
             string currentResult = GetDivisibleResult(number, 3, "Fizz");
             currentResult += GetDivisibleResult(number, 5, "Buzz");
             currentResult = GetFizzBuzzResult(number, currentResult);
-            var finalResult = CheckSpecialCaseZero(number, currentResult);
-            return finalResult;
+            return currentResult;
         }
 
         private static string CheckSpecialCaseZero(int number, string currentResult)
@@ -36,7 +35,9 @@ namespace FizzBuzzWithoutConditionals
             var wordsOrNumber = new Dictionary<bool, string>();
             wordsOrNumber.Add(false, currentResult);
             wordsOrNumber.Add(true, number.ToString());
-            return wordsOrNumber[currentResult == ""];
+            var finalResult = CheckSpecialCaseZero(number, wordsOrNumber[currentResult == ""]);
+
+            return finalResult;
         }
 
         private string GetDivisibleResult(int number, int divisibleBy, string word)
