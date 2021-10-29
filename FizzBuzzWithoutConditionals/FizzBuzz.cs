@@ -4,18 +4,20 @@ namespace FizzBuzzWithoutConditionals
 {
     public class FizzBuzz
     {
-        private Dictionary<int, string> _resultMap;
+        private int _number;
 
         public string CallNumber(int number)
         {
-            initResultMap(number);
-            string currentResult = GetDivisibleResult(number, 3, "Fizz");
-            currentResult += GetDivisibleResult(number, 5, "Buzz");
-            currentResult = GetFizzBuzzResult(number, currentResult);
-            return currentResult;
+            _number = number;
+
+            string currentResult = GetDivisibleResult(3, "Fizz");
+            currentResult += GetDivisibleResult(5, "Buzz");
+            currentResult = GetCombinedResult(currentResult);
+
+            return CheckSpecialCaseZero(currentResult);
         }
 
-        private static string CheckSpecialCaseZero(int number, string currentResult)
+        private string CheckSpecialCaseZero(string currentResult)
         {
             var finalResultMap = new Dictionary<string, string>()
             {
@@ -24,26 +26,31 @@ namespace FizzBuzzWithoutConditionals
                 {"FizzBuzz", "FizzBuzz"},
                 {"0", "FizzBuzz"}
             };
-            finalResultMap.TryAdd(number.ToString(), number.ToString());
+            finalResultMap.TryAdd(_number.ToString(), _number.ToString());
 
             var finalResult = finalResultMap[currentResult];
             return finalResult;
         }
 
-        private static string GetFizzBuzzResult(int number, string currentResult)
+        private string GetCombinedResult(string currentResult)
         {
             var wordsOrNumber = new Dictionary<bool, string>();
             wordsOrNumber.Add(false, currentResult);
-            wordsOrNumber.Add(true, number.ToString());
-            var finalResult = CheckSpecialCaseZero(number, wordsOrNumber[currentResult == ""]);
-
-            return finalResult;
+            wordsOrNumber.Add(true, _number.ToString());
+            var result = wordsOrNumber[currentResult == ""];
+            return result;
         }
 
-        private string GetDivisibleResult(int number, int divisibleBy, string word)
+        private string GetDivisibleResult(int divisibleBy, string word)
         {
-            var dummyResultString = "";
-            var foundWord = _resultMap.TryGetValue(number % divisibleBy, out dummyResultString);
+            var resultMap = new Dictionary<int, string>()
+            {
+                {1, _number.ToString()},
+                {2, _number.ToString()},
+                {3, _number.ToString()},
+                {4, _number.ToString()}
+            };
+            var foundWord = resultMap.TryGetValue(_number % divisibleBy, out _);
 
             var matchMap = new Dictionary<bool, string>()
             {
@@ -52,18 +59,6 @@ namespace FizzBuzzWithoutConditionals
             };
 
             return matchMap[!foundWord];
-        }
-
-        private void initResultMap(int number)
-        {
-            _resultMap = new Dictionary<int, string>()
-            {
-                {1, number.ToString()},
-                {2, number.ToString()},
-                {3, number.ToString()},
-                {4, number.ToString()}
-            };
-            _resultMap.TryAdd(number, number.ToString());
         }
     }
 }
