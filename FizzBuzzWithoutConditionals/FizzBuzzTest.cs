@@ -9,38 +9,28 @@ namespace FizzBuzzWithoutConditionals
     public class FizzBuzzTest
     {
         [Fact]
-        public void OneShowsOne()
+        public void NumberCallsNumber()
         {
-            string result = FizzBuzz(1);
-            result.Should().Be("1");
+            FizzBuzz(1).Should().Be("1");
+            FizzBuzz(2).Should().Be("2");
         }
 
         [Fact]
-        public void TwoShowsTwo()
+        public void DivisibleByThreeCallsFizz()
         {
-            string result = FizzBuzz(2);
-            result.Should().Be("2");
+            FizzBuzz(3).Should().Be("Fizz");
         }
 
         [Fact]
-        public void ThreeShowsFizz()
+        public void DivisibleByFiveCallsBuzz()
         {
-            string result = FizzBuzz(3);
-            result.Should().Be("Fizz");
+            FizzBuzz(5).Should().Be("Buzz");
         }
 
         [Fact]
-        public void FiveShowsBuzz()
+        public void DivisibleByThreeAndFiveCallsFizzBuzz()
         {
-            string result = FizzBuzz(5);
-            result.Should().Be("Buzz");
-        }
-
-        [Fact]
-        public void FifteenShowsFizzBuzz()
-        {
-            string result = FizzBuzz(15);
-            result.Should().Be("FizzBuzz");
+            FizzBuzz(15).Should().Be("FizzBuzz");
         }
 
         [Theory]
@@ -67,10 +57,9 @@ namespace FizzBuzzWithoutConditionals
         [InlineData(30, "FizzBuzz")]
         [InlineData(31, "31")]
 
-        public void ShouldCallWordForNumber(int number, string expectedWord)
+        public void CallsCorrectWordForNumber(int number, string expectedWord)
         {
-            string result = FizzBuzz(number);
-            result.Should().Be(expectedWord);
+            FizzBuzz(number).Should().Be(expectedWord);
         }
 
         private string FizzBuzz(int number)
