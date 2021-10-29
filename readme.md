@@ -7,8 +7,7 @@ statements and afterwards refactored step-by-step to remove all conditionals and
 
 This solution of the Kata was only created to prove that it's possible to not use any conditional statements or loops to achieve the expected behaviour.
 
-Any considerations of clean code such as readability have been disregarded altogether.
-And that's why you're here! 😎
+Considerations of clean code such as readability have been not been completely disregarded but were not put in focus ;-)
 
 ***Note***: the amount of data-driven test cases should usually of course not be necessary and are rather provided to demonstrate to the reader that the solution works ;-) 
 
